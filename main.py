@@ -26,4 +26,27 @@ my_shoe.euro_size()
 
 my_dads_shoe = Shoe(9, 'Blue', smelly=True)
 my_dads_shoe.euro_size()
-  
+
+def galaxy(name, *space_debris, pluto_is_planet=True,**planet_colors):
+  print(f'''
+    The {name} is a galaxy in our universe. \n
+    This galaxy contains vasts amounts of different space matter including \n
+    {space_debris[0, -2]}, and {space_debris[-1]}. \n
+    In this galaxy, there are {len(planet_colors)} planets. \n
+    Based on recent astronomical studies, astronomers have \n
+    decided that the statement of Pluto being a planent is {pluto_is_planet}. 
+  ''')
+  print('Here is a list of the planets and their colors:')
+  for key, value in planet_colors.items():
+    print(f'{planet_colors[key]} is {planet_colors[value]}.')
+
+
+mercury='gray',
+venus='yellowish white',
+earth='blue and green',
+mars='red',
+saturn='yellow-brown',
+jupiter='orange',
+uranus='light blue',
+neptune='deep see blue',
+pluto='brown'
