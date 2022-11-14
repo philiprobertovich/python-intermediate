@@ -1,1 +1,0 @@
-def fourth_place():
