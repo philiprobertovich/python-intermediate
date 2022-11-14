@@ -6,4 +6,4 @@ def fourth_place(*args):
       return args[3]
     except IndexError as error:
       print(error)
-      print("The list is shorter than 4 items")
+      
