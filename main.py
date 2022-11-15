@@ -7,14 +7,11 @@ def fourth_place(*args: list) -> list:
   Returns:
       list: list index item
   """
-  if len(args) > 3:
+  try:
     return args[3]
-  else:
-    try:
-      return args[3]
-    except IndexError as error:
-      print(error)
-      print("The list is shorter than 4 items")
+  except IndexError as error:
+    print(error)
+    print("The list is shorter than 4 items")
 
 # Takes two numbers and subtracts one from the other
 subtracter_lambda = lambda num_1, num_2: num_1 - num_2
@@ -48,7 +45,7 @@ my_shoe.euro_size()
 my_dads_shoe = Shoe(9, 'Blue', smelly=True)
 my_dads_shoe.euro_size()
 
-def galaxy(name: str, *space_debris: list, pluto_is_planet: bool =True, **planet_colors: dict) -> str:
+def galaxy(name: str, *space_debris: str, pluto_is_planet: bool =True, **planet_colors: str) -> str:
   """Takes a name of the galaxy, a list of various space matter and objects, a boolean value whether Pluto is a planet, and a dictionary of planets and their colors, and produces a paragraph detailing all these arguements and how they make up the galaxy.
 
   Args:
@@ -60,19 +57,26 @@ def galaxy(name: str, *space_debris: list, pluto_is_planet: bool =True, **planet
   Returns:
       str: A paragraph of how all the different arguement comprise the galaxy
   """
+  debris_str = ""
+  for i in range(0, len(space_debris)-1):
+    debris_str += space_debris[i] + ", "
+  
+  planets_str = ""
+  for key in planet_colors.keys():
+    planets_str += f"{key.capitalize()} is {planet_colors[key]}. "    
+
+
   print(f'''
     The {name} is a galaxy in our universe. \n
     This galaxy contains vasts amounts of different 
-    space matter including {space_debris}. \n
+    space matter including {debris_str} and {space_debris[-1]}. \n
     In this galaxy, there are {len(planet_colors)} planets. \n
     Based on recent astronomical studies, astronomers have \n
     decided that the statement of Pluto being a planent is {pluto_is_planet}.  \n
-    Here is a list of the planets and their colors:
+    Here is a list of the planets and their colors: \n
+    {planets_str}
   ''')
-  for key in planet_colors.keys():
-    print(f'''
-    {key.capitalize()} is {planet_colors[key]}.
-    ''')
+
 
 galaxy(
   "Milky Way Galaxy", 

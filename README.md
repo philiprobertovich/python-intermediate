@@ -12,7 +12,7 @@
 ## Description
 
 * fourth_place(): This function takes a list as an arguement and returns the fourth index item. If the list's length is shorter than 4, a type-except block of code will execute and give the user an index error and alert them that the list is shorter than 4 items.
-* subtractor_lambda: This is a variable that a lambda function stored inside of it. The function takes two numbers as parameters and subtracts one from the other.
+* subtractor_lambda: This is a variable that has a lambda function stored inside of it. The function takes two numbers as parameters and subtracts one from the other.
 * class Shoe: This class is created and takes numerous arguments that become its attributes, such as the size in US measurements taken as an integer, the color of the shoe taken as a string, and a boolean variable of whether the shoe is smelly or not. A method is also defined in this class that converts the shoe size from US measurement standards to European measurement standards by adding by a factor of 33. Two instances of this class is then also created that then utilize the method.
 * galaxy(): This function takes various arguements including, a positional arguement that will represent the name of the galaxy, a list of arguments that describe different space matter and debris, a boolean variable about whether pluto is a planet or not, and a dictionary of keyword arguements that link the planets and their associated colors that comprise the galaxy. This function then returns a paragraph detailing how all these arguements make up the galaxy.
 
